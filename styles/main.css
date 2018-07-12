@@ -1,0 +1,485 @@
+/* General */
+
+* {
+	margin: 0;
+	padding: 0;
+	line-height: 1.2em;
+	font-family: "Times New Roman", serif;
+}
+
+h1, h2, h3, h4, h5 {
+	margin-bottom: 1em;
+	font-family: Palatino, "Times New Roman", serif;
+}
+
+a {
+	text-decoration: none;
+	color: #00F;
+	overflow: hidden;
+}
+
+.text a[href $='.pdf'] {
+	padding-right: 23px;
+	background: transparent url('../pictures/other-images/pdf-icon.png') no-repeat top right;
+}
+
+.text a[href $='.jpg'] {
+	/* padding-right: 23px; */
+	background: transparent url('../pictures/other-images/jpg-icon.png') no-repeat top right;
+}
+
+.text a[href $='.JPG'] {
+	/* padding-right: 23px; */
+	background: transparent url('../pictures/other-images/jpg-icon.png') no-repeat top right;
+}
+
+.text a[href ^='http'] {
+	/* padding-right: 23px; */
+	background: transparent url('../pictures/other-images/ext-icon.png') no-repeat top right;
+}
+
+a:visited { color: #70305A; }
+
+.text a { text-decoration: underline; }
+
+a:hover {
+	text-decoration: none;
+	color: #C72323; /* not-as-dark red */
+}
+
+.text a[href $='.pdf']:hover, .text a[href $='.jpg']:hover, .text a[href ^='http']:hover {
+	background-position: right -38px;
+}
+
+body {
+	padding: 20px 0 2em 65px;
+	min-width: 40em;
+	position: relative;
+}
+
+body.contents, body.pathways {
+	background-image: url('../pictures/other-images/background.jpg');
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100vw;
+}
+
+p {
+	margin: 0 0 1em 30px;
+}
+
+div.text p {
+	margin: 0;
+	text-indent: 3em;
+}
+
+div.text {
+	max-width: 50em;
+	margin: 0 0 2em 30px;
+	padding-right: 4em;
+	text-align: justify;
+}
+
+img {
+	border: 0;
+}
+
+#footer {
+	color: #555;
+	text-align: center;
+	margin-top: 3em;
+	max-width: 50em;
+}
+
+#footer p { margin: 0; }
+
+
+/* Contents and Pathways Pages */
+
+ul { list-style-type: none; }
+
+ol.sub {
+	max-width: 80em;
+	margin-bottom: 1em;
+	margin-left: -5em;
+	list-style-type: none;
+	position: relative;
+	overflow: auto;
+	margin-right: 2em;
+}
+
+ol.sub li, p.previous, p.next {
+	height: 5em;
+	width: 15em;
+	background-color: transparent; /* For some bizarre reason this fixes a bug in Safari. */
+	font-family: Palatino, "Times New Roman", serif;
+}
+
+ol.sub li {
+	float: left;
+	/*position: relative;*/
+	margin-left: 5em;
+}
+
+h3 {
+	
+}
+
+ol.sub li a, p.previous a, p.next a {
+	border: 1px solid #CCC;
+	display: block;
+	padding: .3em;
+	height: 3.4em;
+	overflow: hidden;
+}
+
+ol.sub li a.just_text, p.previous a.just_text, p.next a.just_text {
+	padding: .2em;
+	height: 3.6em;
+	text-align: center;
+}
+
+img.link_image {
+	max-width: 60px;
+	float: left;
+	margin-right: 8px;
+	margin-top: 5px;
+}
+
+span.name {
+	clear: left;
+}
+
+ol.sub li a:hover, p.previous a:hover, p.next a:hover {
+	background-color: #A52A2A; /* darkish red*/
+	color: #fff;
+}
+
+/* Highlights entries that are new in this version: */
+
+
+
+/* Appendices */
+
+div.appendices {
+	margin-left: 3em;
+	padding: 1em;
+	margin-right: 8em;
+	max-width: 64em;
+	border: 1px solid #CCC;
+	margin-top: -1em;
+	margin-bottom: 2em;
+}
+
+.appendices h4 {
+	margin-bottom: .5em;
+}
+
+.appendices ul {
+	margin-left: 40px;
+	list-style-type: disc;
+}
+
+.appendices ul li {
+	margin-top: .1em;
+}
+
+p#alternate_storylines_link {
+	position: absolute;
+	top: 2em;
+	right: 50px;
+	text-align: right;
+}
+
+/* Element Page */
+
+.navigation {
+	margin-bottom: 1em;
+}
+
+.prev_next {
+	max-width: 46em;
+	min-width: 37em;
+	margin-top: .2em;
+	margin-left: 50px;
+	position: relative;
+	overflow: hidden;
+	height: 4.2em;
+	margin-right: 50px;
+}
+
+.prev_next p {
+	margin: 0;
+	position: absolute;
+	top: 0;
+}
+
+p#to_contents, p#to_pathway { margin-bottom: .5em; }
+
+p#to_pathway { margin-left: 60px; }
+
+p.previous {
+	left: 0;
+}
+
+p.next {
+	right: 0;
+}
+
+.arrow {
+	position: absolute;
+	top: -.3em;
+	font-size: 5em;
+	color: #DEDEDE;
+	padding: 0 .1em 0 .1em;
+}
+
+p.previous a .arrow {
+	left: 3em;
+}
+
+p.previous a:hover .arrow, p.next a:hover .arrow {
+	color: #BBB;
+}
+
+p.next a .arrow {
+	right: 3em;
+}
+
+#alternate_nav {
+	margin-top: 4em;
+}
+
+#alternate_nav h5 {
+	font-size: 1.1em;
+	margin-top: 1em;
+	font-weight: normal;
+	font-family: Palatino, "Times New Roman", serif;
+}
+
+#pre_text {
+	margin-left: 30px;
+	margin-top: -1em;
+}
+
+#image_browsing p { margin-left: 0; }
+
+#image {
+	margin-bottom: .2em;
+	display: block;
+	clear: both;
+}
+
+p#arrows_notice {
+	color: #555;
+	margin: 0;
+}
+
+ul#thumbnails {
+	margin: .2em 0 2em 0;
+	overflow: hidden;
+}
+
+ul.fixed {
+	max-width: 800px;
+}
+
+ul#thumbnails li {
+	display: block;
+	float: left;
+	margin: 5px;
+}
+
+ul#thumbnails a:hover img {
+	border: 3px solid #A52A2A; /* darkish red*/
+	margin: -3px;
+}
+
+ul#thumbnails li.selected a img {
+	border: 4px solid #A52A2A; /* darkish red*/
+	margin: -4px;
+}
+
+p#date {
+	font-family: Palatino, "Times New Roman", serif;
+	font-style: italic;
+}
+
+ul#pathways_list h5 {
+	margin-left: 30px;
+}
+
+/* List of guns in chapter 12 */
+
+ul.inline {
+	margin: 1em 0 1em 6em;
+}
+
+/* Bibliography Indentation */
+
+div#bibliography p {
+	max-width: 48em;
+	margin-left: 4em;
+	text-indent: -2em;
+	margin-bottom: 1.2em;
+}
+
+/* Acknowledgements */
+
+#dedication {
+	text-indent: 0;
+	text-align: center;
+	margin-top: 5em;
+	margin-bottom: 5em;
+}
+
+#acknowledgements ul {
+	list-style-type: disc;
+	max-width: 35em;
+	margin: 2em 0 2em 70px;
+}
+
+#acknowledgements ul li {
+	margin-bottom: 1em;
+}
+
+/* Short stories */
+
+div#story { margin-top: 2em; }
+
+div#story h4 {
+	font-style: italic;
+	font-weight: normal;
+	font-size: 1.1em;
+	margin: 2em 0 .5em 0;
+}
+
+div#story div.opening p, div#story div.closing p {
+	font-style: italic;
+	margin: 0 3em 0 3em;
+}
+
+.closing {
+	margin-top: 2em;
+}
+
+blockquote {
+	margin: 2em 4em 2em 4em;
+	font-size: .9em;
+}
+
+blockquote h5 {
+	text-align: center;
+	font-size: 1em;
+	margin-bottom: .4em;
+}
+
+blockquote p, div#story blockquote p {
+	margin-bottom: 1em;
+	text-indent: 0;
+}
+
+
+#intro_video {
+	margin: 0 auto 1em auto;
+	width: 640px;
+}
+
+.text .below_video, .text .below_music {
+	font-size: .9em;
+	color: #333;
+	font-style: italic;
+	margin-bottom: 2em;
+}
+
+.text .below_video {
+	text-align: center;
+	width: 70%;
+	margin: 0 auto 2em auto;
+	position: relative;
+}
+
+.text .below_video p {
+	float: left;
+	text-indent: 0;
+}
+
+/*	The following eliminates the need
+ 	for scroll bar in the external
+	image window. Both divs have to be 100%.
+*/
+
+body.external {
+	padding: 0;
+	min-width: 27em;
+}
+
+body.external #image_wrapper {
+	position: relative;
+}
+
+body.external #image_browsing {
+	padding: 10px 20px 0 20px;
+}
+
+body.external #external {
+	display: none;
+}
+
+#controls a { text-decoration: none; }
+
+#controls ul li {
+	display: block;
+	float: left;
+	margin: .3em .7em .7em 0;
+}
+
+#controls ul li#external {
+	position: static;
+}
+
+#controls ul li a {
+	border: 1px solid #CCC;
+	padding: .3em;
+}
+
+#controls ul li a:hover {
+	background-color: #A52A2A; /* darkish red */
+	color: #fff;
+}
+
+#controls .selected, #controls .selected:hover {
+	background-color: #9a4a42; /* somewhat paler red */
+	color: #fffefe;
+}
+
+#controls .disabled a, #controls .disabled a:hover {
+	background-color: #EEE;
+	color: #CCC;
+}
+
+.upgrade, .no_js {
+	width: 33em;
+	border: 2px solid #A52A2A; /* darkish red */
+	background-color: #FCC;
+	padding: 1em;
+}
+
+/*This handles the captions in the slideshow.*/
+.caption {
+	display: none;
+}
+
+#main_caption {
+	margin-bottom: -.2em;
+}
+
+.population {
+	text-align: left;
+	margin: 1em 5em;
+}
+
+.population tr td {
+	padding: 0 1em;
+}

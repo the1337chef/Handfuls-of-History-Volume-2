@@ -1,0 +1,4 @@
+[autorun]
+shellexecute=index.html
+label=Handfuls of History
+icon=handfuls.ico
